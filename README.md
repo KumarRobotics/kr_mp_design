@@ -30,7 +30,21 @@ All maps are of size 20m x 10m x 5m. We provide three types of maps:
 ECS measures the complexity of an environment. It consists of density index, clutter index, and structure index. Please see the paper for which planner performs best in each ECS range. You can use ECS to evaluate your environment and choose the right motion planner.
 
 ## Installation
-The easies way to is to use vcs to clone all the repos. Follow instruction in the kr_autonomous_flight Wiki.
+The easies way to is to use vcs to clone all the repos.
+Make a ros workspace and cd to src
+```
+git clone -b dev_not_fixed_dt git@github.com:ljarin/kr_autonomous_flight.git
+sudo apt install python3-vcstool
+vcs import < kr_autonomous_flight/external_all.yaml #import dependencies
+vcs import < motion_primitives/deps_ssh.repos # import dispersion planner dependencies
+rosdep install --from-paths src --ignore-src -r -y
+sudo apt install -y libspdlog-dev  ros-noetic-ompl libpcl-dev libeigen3-dev libtbb-dev libgtest-dev python3-pcl libtool libnlopt-dev
+pip3 install pandas tqdm
+catkin config --cmake-args -DCMAKE_BUILD_TYPE=Release #if you want other cmake flags later make sure you reset the config
+catkin build
+```
+
+Next give path to the json file in tracker_params_mp.yaml : dispersion/graph_file: FILL IN PATH
 
 Coming soon: Splitting the repos to fly the quad to a different repo than the ones that do mapping.
 ### Components

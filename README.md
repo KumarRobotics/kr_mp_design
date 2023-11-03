@@ -6,7 +6,7 @@
 This repo gives a guideline on what motion planners to use for different environments. This repo provided three tools:
 1. A set of two-stage motion planners.
 2. A set of map generators (obstacle, maze, real datasets).
-3. An evaluation metric for environment called Environment Complexity Signature (ECS) you can use to evaluate your environment and choose the right motion planner.
+3. An evaluation metric for any environment called Environment Complexity Signature (ECS). You can use it to evaluate your environment and choose the right motion planner.
 
 This repo is tested with Ubuntu 20.04 and ROS Noetic. Everything in this repo flies on hardware!
 ### Planners
@@ -35,7 +35,7 @@ Make a ros workspace and cd to src
 ```
 git clone -b dev_not_fixed_dt git@github.com:ljarin/kr_autonomous_flight.git
 sudo apt install python3-vcstool
-vcs import < kr_autonomous_flight/external_all.yaml #import dependencies
+vcs import < kr_autonomous_flight/external_all.yaml #import dependencies, GCOPTER and Motion Primitive will have access issues, please email maintainer to get an copy
 vcs import < motion_primitives/deps_ssh.repos # import dispersion planner dependencies
 rosdep install --from-paths src --ignore-src -r -y
 sudo apt install -y libspdlog-dev  ros-noetic-ompl libpcl-dev libeigen3-dev libtbb-dev libgtest-dev python3-pcl libtool libnlopt-dev

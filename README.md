@@ -43,8 +43,11 @@ pip3 install pandas tqdm
 catkin config --cmake-args -DCMAKE_BUILD_TYPE=Release #if you want other cmake flags later make sure you reset the config
 catkin build
 ```
+If building packages require a specific cmake version, follow [this](https://apt.kitware.com/) for cmake installation instructions.
 
-Next give path to the json file in tracker_params_mp.yaml : dispersion/graph_file: FILL IN PATH
+Download the files from [here](https://drive.google.com/drive/folders/1LImwhYTajVImL3pydA4d91aILSOMddD3?usp=sharing) for point-cloud of real maps, pre-generated maze maps, and dispersion planner precomputed offline file. If you want to run obstacle maps with other planners, you do not need these files. 
+
+Next give path to the json file in tracker_params_mp.yaml : dispersion/graph_file: FILL IN PATH 
 
 Coming soon: Splitting the repos to fly the quad to a different repo than the ones that do mapping.
 ### Components
@@ -53,7 +56,7 @@ Coming soon: Splitting the repos to fly the quad to a different repo than the on
    2. Dispersion Planner: [motion_primitive](https://github.com/ljarin/motion_primitives)
    3. GCOPTER: [GCOPTER](https://github.com/yuwei-wu/GCOPTER.git)
    4. ALTRO:[kr_ilqr_optimizer](https://github.com/KumarRobotics/kr_ilqr_optimizer/tree/icra_final), [altro](https://github.com/shaoyifei96/altro/tree/ros)
-2. Maps: We have consolidated all three types of maps into one repo [kr_param_map](https://github.com/KumarRobotics/kr_param_map). The maze file generator can be found [here](https://github.com/shaoyifei96/multi_solution_mazegenerator)
+2. Maps: We have consolidated all three types of maps into one repo [kr_param_map](https://github.com/KumarRobotics/kr_param_map). To generate your own maze file, use this generator [here](https://github.com/shaoyifei96/multi_solution_mazegenerator)
 3. ECS: To evaluate for a new environment, use [kr_param_map](https://github.com/KumarRobotics/kr_param_map)
 4. Datasets: [STPLS3D](https://www.stpls3d.com/) and [M3ED](https://m3ed.io/)
 

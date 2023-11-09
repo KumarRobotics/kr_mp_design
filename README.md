@@ -1,5 +1,5 @@
 # Design and Evaluation of Motion Planners for Quadrotors
-*What two-stage quadrotor motion planner should I use for my environment?* 
+*What two-stage quadrotor motion planner should I use for my environment?* [arXiv](https://arxiv.org/abs/2309.13720)
 
 ![Experiment of Quadrotor flying through a small maze](https://github.com/KumarRobotics/kr_mp_design/blob/main/pics/real_exp_maze.png)
 

@@ -1,5 +1,5 @@
 # Design and Evaluation of Motion Planners for Quadrotors
-*What two-stage quadrotor motion planner should I use for my environment?* [arXiv](https://arxiv.org/abs/2309.13720)
+*What two-stage quadrotor motion planner should I use for my environment?* [arXiv](https://arxiv.org/abs/2309.13720), [video](https://youtu.be/xLHHDw3IQr4)
 
 ![Experiment of Quadrotor flying through a small maze](https://github.com/KumarRobotics/kr_mp_design/blob/main/pics/real_exp_maze.png)
 
@@ -30,7 +30,7 @@ All maps are of size 20m x 10m x 5m. We provide three types of maps:
 ECS measures the complexity of an environment. It consists of density index, clutter index, and structure index. Please see the paper for which planner performs best in each ECS range. You can use ECS to evaluate your environment and choose the right motion planner.
 
 ## Installation
-The easies way to is to use vcs to clone all the repos.
+The easiest way is to use vcs to clone all the repos.
 Make a ros workspace and cd to src
 ```
 git clone -b dev_not_fixed_dt git@github.com:ljarin/kr_autonomous_flight.git
@@ -63,14 +63,17 @@ Coming soon: Splitting the repos to fly the quad to a different repo than the on
 
 # Citation
 ```
-@misc{shao2023design,
-      title={Design and Evaluation of Motion Planners for Quadrotors}, 
-      author={Yifei Simon Shao and Yuwei Wu and Laura Jarin-Lipschitz and Pratik Chaudhari and Vijay Kumar},
-      year={2023},
-      eprint={2309.13720},
-      archivePrefix={arXiv},
-      primaryClass={cs.RO}
-}
+@INPROCEEDINGS{10610207,
+  author={Shao, Yifei Simon and Wu, Yuwei and Jarin-Lipschitz, Laura and Chaudhari, Pratik and Kumar, Vijay},
+  booktitle={2024 IEEE International Conference on Robotics and Automation (ICRA)}, 
+  title={Design and Evaluation of Motion Planners for Quadrotors in Environments with Varying Complexities}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={10033-10039},
+  keywords={Measurement;Navigation;Software algorithms;Kinematics;Planning;Complexity theory;Trajectory},
+  doi={10.1109/ICRA57147.2024.10610207}}
+
 ```
 
 
